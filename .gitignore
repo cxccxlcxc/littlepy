@@ -1,0 +1,6 @@
+*~
+build/
+dist/
+files.*
+littlepy.egg-info/
+*.pyc
