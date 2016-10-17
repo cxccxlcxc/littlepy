@@ -8,59 +8,14 @@ Provide python utility in linux pipe, takes commands from stdin and parse into p
 
 ## Usage
 
-	#### count how many process running by each USER 
-	$ 
-	$ cat test/simple.cfg
-		test1=hi
-		test2 = hello
+	#### count how many process running by each USER
+	test/process_count_by_USER.sh
 
-		[first_section]
-		mytest=55
-		yourtest     =     99
-		#nothere=notthere
-		myboolean
+	#### sum up how many cpu resource used by each USER
+	test/cpu_usg_by_USER.sh
 
-		[second section]
-		myway=or the
-		  highway
-	
-	require 'configparser'
-	cp = ConfigParser.new('test/simple.cfg')
-	puts cp.to_s
-	
-		test1: hi
-		test2: hello
-		[first_section]
-		myboolean
-		mytest: 55
-		yourtest: 99
-		[second section]
-		myway: or the highway
-		
-	$ cat test/complex.cfg
-		global1=default-$(global3)
-		global2=strange-$(global1)
-		global3=whatever
-
-		[section1]
-		local1=$(global2)-$(local2)-local
-		local2=yodel
-
-		[section2]
-		local1=hotel
-		local2=recent $(local1)
-		local3=un$(resolvable)
-	
-	cp = ConfigParser.new('test/complex.cfg')
-	puts cp['global2']
-	puts cp['section1']['local1']
-	puts cp['section2']['local2']
-	puts cp['section2']['local3']
-	
-		strange-default-whatever
-		strange-default-whatever-yodel-local
-		recent hotel
-		un$(resolvable)
+	#### quick data analysis on a csv file
+	test/csv_processing.sh
 
 
 ## Contributing
