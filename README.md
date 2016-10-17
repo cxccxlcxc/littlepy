@@ -8,13 +8,13 @@ Provide python utility in linux pipe, takes commands from stdin and parse into p
 
 ## Usage
 
-	#### count how many process running by each USER
+	count how many process running by each USER
 	test/process_count_by_USER.sh
 
-	#### sum up how many cpu resource used by each USER
+	sum up how many cpu resource used by each USER
 	test/cpu_usg_by_USER.sh
 
-	#### quick data analysis on a csv file
+	quick data analysis on a csv file
 	test/csv_processing.sh
 
 
