@@ -8,14 +8,14 @@ Provide python utility in linux pipe, takes commands from stdin and parse into p
 
 ## Usage
 
-	#### count how many process running by each USER
-	test/process_count_by_USER.sh
+	#count how many process running by each USER
+	ps -aux | tr -s " " | awk '{print $1,$2}' | py -d 'print X.groupby("USER").count()'
 
-	#### sum up how many cpu resource used by each USER
-	test/cpu_usg_by_USER.sh
+	#sum up how many cpu resource used by each USER
+	ps -aux | tr -s " " | awk '{print $1,$3}' | py -d 'print X.groupby("USER")["%CPU"].sum()'
 
-	#### quick data analysis on a csv file
-	test/csv_processing.sh
+	#quick data analysis on a csv file
+	cat ../data/test.csv | py -d -s, "print X.describe()"
 
 
 ## Contributing
