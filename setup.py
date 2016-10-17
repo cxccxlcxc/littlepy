@@ -1,6 +1,6 @@
 #!/user/bin/env python
 from distutils.core import setup
-# from setuptools import setup
+#from setuptools import setup
 
 setup(
     name = "littlepy",
@@ -9,6 +9,7 @@ setup(
     author_email = "chen.xiaoc89@gmail.com",
     license = "MIT",
     version = "0.99",    
+    url="git@github.com:cxccxlcxc/littlepy.git",
     packages = ["littlepy"],
     scripts = ["scripts/py"],
     data_files = [("data", ["data/test.csv"])]
