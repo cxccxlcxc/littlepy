@@ -10,5 +10,6 @@ setup(
     license = "MIT",
     version = "0.99",    
     packages = ["littlepy"],
-    scripts = ["scripts/py"]
+    scripts = ["scripts/py"],
+    data_files = [("data", ["data/test.csv"])]
 )
